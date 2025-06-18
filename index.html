@@ -2,96 +2,119 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FAMESH</title>
   <style>
-    body {
-      margin: 0; padding: 4rem;
-      font-family: Helvetica, Arial, sans-serif;
-      background: #fafafa; color: #111;
-      line-height: 1.6; overflow-x: hidden;
-    }
-    header {
-      text-align: center; margin-bottom: 6rem;
-    }
-    header h1 {
-      font-size: 4rem; letter-spacing: 4px;
+    html, body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      scroll-behavior: smooth;
+      background: #fff;
+      color: #000;
     }
     nav {
-      display: flex; justify-content: center;
-      gap: 3rem; margin-bottom: 6rem;
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(255,255,255,0.9);
+      padding: 1em;
+      display: flex;
+      justify-content: center;
+      gap: 2em;
+      z-index: 1000;
+      border-bottom: 1px solid #eee;
     }
     nav a {
-      position: relative; text-decoration: none;
-      color: #111; text-transform: uppercase;
-      font-weight: bold; font-size: 0.9rem;
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      border-bottom: 2px solid transparent;
+      transition: border 0.3s ease;
     }
-    nav a::after {
-      content: ""; position: absolute; left: 0; bottom: -6px;
-      width: 0; height: 2px; background: #111;
-      transition: width 0.3s ease;
+    nav a:hover {
+      border-bottom: 2px solid #ff4081;
     }
-    nav a:hover::after {
+    section {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 2em;
+    }
+    .hero {
+      position: relative;
+      overflow: hidden;
+    }
+    .hero video {
+      position: absolute;
+      top: 0;
+      left: 0;
       width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
     }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 4rem;
-      margin-bottom: 6rem;
+    .hero h1 {
+      font-size: 4vw;
+      background: linear-gradient(45deg, #ff4081, #40c4ff, #7c4dff);
+      -webkit-background-clip: text;
+      color: transparent;
     }
-    .block {
-      background: #fff; padding: 2rem;
-      border: 1px solid #eee;
-      display: flex; flex-direction: column;
-      justify-content: space-between;
-      min-height: 200px;
+    .about, .lookbook, .contact {
+      border-top: 2px solid #eee;
     }
-    .block h2 { margin-bottom: 1.2rem; font-size: 1.4rem; }
-    .block p { flex: 1; }
-    .block button {
-      align-self: start;
-      background: none; border: 1px solid #111;
-      padding: 0.5rem 1rem; cursor: pointer;
-      text-transform: uppercase; font-weight: bold;
+    .about h2, .lookbook h2, .contact h2 {
+      font-size: 2em;
+      color: #333;
     }
-    .block button:hover {
-      background: #111; color: #fafafa;
-    }
-    footer {
-      text-align: center; color: #777;
-      margin-top: 8rem; font-size: 0.875rem;
-      border-top: 1px solid #eee; padding-top: 4rem;
+    .vibrant-line {
+      height: 4px;
+      background: linear-gradient(90deg, #ff4081, #40c4ff, #7c4dff);
+      width: 100px;
+      margin: 1em auto;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>FAMESH</h1>
-    <p>Famous in the Shadows</p>
-  </header>
+
   <nav>
+    <a href="#hero">Home</a>
     <a href="#about">About</a>
-    <a href="#shop">Shop</a>
+    <a href="#lookbook">Lookbook</a>
     <a href="#contact">Contact</a>
   </nav>
-  <section class="grid" id="about">
-    <div class="block">
-      <h2>About</h2>
-      <p>FAMESH is a minimalist fashion label rooted in anonymity, artistic rebellion, and deconstructed design. We craft wearable statements through subtle disruption.</p>
-    </div>
-    <div class="block" id="shop">
-      <h2>Shop</h2>
-      <p>Our debut drop features tailored pieces with paint-splatter accents, raw hems, and unexpected details.</p>
-      <button onclick="alert('You\'ll be the first to know.')">Notify Me</button>
-    </div>
-    <div class="block" id="contact">
-      <h2>Contact</h2>
-      <p>Reach us at <a href="mailto:info@famesh.ai">info@famesh.ai</a></p>
+
+  <section class="hero" id="hero">
+    <video autoplay muted loop>
+      <source src="YOUR-VIDEO-URL-HERE.mp4" type="video/mp4">
+    </video>
+    <h1>FAMESH</h1>
+  </section>
+
+  <section class="about" id="about">
+    <div>
+      <h2>About FAMESH</h2>
+      <div class="vibrant-line"></div>
+      <p style="max-width:600px; text-align:center;">FAMESH stands for famous in the shadows — blending art, tech, and fashion to create something unseen. We design for those who lead from behind the curtain.</p>
     </div>
   </section>
-  <footer>
-    &copy; 2025 FAMESH. All rights reserved.
-  </footer>
+
+  <section class="lookbook" id="lookbook">
+    <div>
+      <h2>Lookbook</h2>
+      <div class="vibrant-line"></div>
+      <p>Coming soon: a gallery of our latest designs and concepts.</p>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>Contact</h2>
+      <div class="vibrant-line"></div>
+      <p>Email us: <a href="mailto:info@famesh.com">info@famesh.com</a></p>
+    </div>
+  </section>
+
 </body>
 </html>
