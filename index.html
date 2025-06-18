@@ -2,119 +2,127 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FAMESH</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Famesh</title>
   <style>
-    html, body {
+    body {
       margin: 0;
-      padding: 0;
-      font-family: sans-serif;
-      scroll-behavior: smooth;
-      background: #fff;
+      font-family: Arial, sans-serif;
+      background: white;
       color: #000;
     }
-    nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background: rgba(255,255,255,0.9);
-      padding: 1em;
+
+    header {
+      background-color: #0026ff; /* vibrant royal blue */
+      padding: 20px 40px;
       display: flex;
-      justify-content: center;
-      gap: 2em;
-      z-index: 1000;
-      border-bottom: 1px solid #eee;
-    }
-    nav a {
-      text-decoration: none;
-      color: #000;
-      font-weight: bold;
-      border-bottom: 2px solid transparent;
-      transition: border 0.3s ease;
-    }
-    nav a:hover {
-      border-bottom: 2px solid #ff4081;
-    }
-    section {
-      min-height: 100vh;
-      display: flex;
+      justify-content: space-between;
       align-items: center;
-      justify-content: center;
-      padding: 2em;
     }
+
+    .logo {
+      color: white;
+      font-size: 28px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
     .hero {
-      position: relative;
-      overflow: hidden;
+      background-color: #0026ff;
+      color: white;
+      padding: 100px 40px;
+      text-align: center;
     }
-    .hero video {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      z-index: -1;
-    }
+
     .hero h1 {
-      font-size: 4vw;
-      background: linear-gradient(45deg, #ff4081, #40c4ff, #7c4dff);
-      -webkit-background-clip: text;
-      color: transparent;
+      font-size: 48px;
+      margin: 0 0 20px 0;
     }
-    .about, .lookbook, .contact {
-      border-top: 2px solid #eee;
+
+    .hero p {
+      font-size: 20px;
+      margin: 0 0 30px 0;
     }
-    .about h2, .lookbook h2, .contact h2 {
-      font-size: 2em;
-      color: #333;
+
+    .hero button {
+      background-color: #00c853; /* green pop of color */
+      border: none;
+      padding: 15px 30px;
+      color: white;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
     }
-    .vibrant-line {
-      height: 4px;
-      background: linear-gradient(90deg, #ff4081, #40c4ff, #7c4dff);
-      width: 100px;
-      margin: 1em auto;
+
+    .content {
+      padding: 60px 40px;
+      text-align: center;
+    }
+
+    .content h2 {
+      color: #0026ff;
+    }
+
+    .pops {
+      margin-top: 20px;
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+    }
+
+    .pop {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+    }
+
+    .pop1 { background: #ff4081; }
+    .pop2 { background: #ffab00; }
+    .pop3 { background: #00e5ff; }
+
+    footer {
+      background-color: #0026ff;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">famesh</div>
+    <nav>
+      <a href="#work">Our Work</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-  <nav>
-    <a href="#hero">Home</a>
-    <a href="#about">About</a>
-    <a href="#lookbook">Lookbook</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <section class="hero" id="hero">
-    <video autoplay muted loop>
-      <source src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WhatCarCanYouGetForAGrand.mp4" type="video/mp4">
-    </video>
-    <h1>FAMESH</h1>
-  </section>
-
-  <section class="about" id="about">
-    <div>
-      <h2>About FAMESH</h2>
-      <div class="vibrant-line"></div>
-      <p style="max-width:600px; text-align:center;">famous in the shadows</p>
+  <section class="hero">
+    <h1>Building digital experiences</h1>
+    <p>We create high-quality, innovative designs that make an impact.</p>
+    <button>Our Work</button>
+    <div class="pops">
+      <div class="pop pop1"></div>
+      <div class="pop pop2"></div>
+      <div class="pop pop3"></div>
     </div>
   </section>
 
-  <section class="lookbook" id="lookbook">
-    <div>
-      <h2>Lookbook</h2>
-      <div class="vibrant-line"></div>
-      <p>Coming soon: a gallery of our latest designs and concepts.</p>
-    </div>
+  <section class="content">
+    <h2>Your partner in design and development</h2>
+    <p>From concept to launch, we handle the entire process of designing, building, and optimizing your website.</p>
   </section>
 
-  <section class="contact" id="contact">
-    <div>
-      <h2>Contact</h2>
-      <div class="vibrant-line"></div>
-      <p>Email us: <a href="mailto:famesh.xyz@gmail.com">famesh.xyz@gmail.com</a></p>
-    </div>
-  </section>
-
+  <footer>
+    &copy; 2025 Famesh. All rights reserved.
+  </footer>
 </body>
 </html>
